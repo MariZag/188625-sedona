@@ -45,18 +45,21 @@ p {
   background-color: #81b3d2; /*для наглядности сетки*/
 }
 
-.main-navigation {
+.main-navigation ul{
   margin: 0;
   padding: 0;
-  font-size: 0;
 }
 
 .main-navigation li {
   float: left;
-  width: 240px;
+  width: 20%;
   padding-top: 15px;
   text-align: center;
   background-color: #dceaf3 /*для наглядности сетки*/
+}
+
+.main-navigation li:nth-last-child(2) {
+  margin-left: 20%;
 }
 
 .main-navigation a {
@@ -70,8 +73,8 @@ p {
 
 .menu-logo {
   position: absolute;
-  width: 140px;
-  margin: 0 auto;
+  left: 50%;
+  margin: 0 0 0 -70px;
 }
 
 .intro {
