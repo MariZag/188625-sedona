@@ -6,6 +6,7 @@ body {
   color: #333333;
   margin: 0;
   padding: 0;
+  background-color: #f2f2f2;
 }
 
 h1 {
@@ -13,17 +14,21 @@ h1 {
   font-weight: bold;
   line-height: 26px;
   color: #000000;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 21px;
   font-weight: bold;
   color: #000000;
+  text-transform: uppercase;
+  line-height: 26px;
 }
 
 p {
   font-size: 14px;
   line-height: 26px;
+  text-transform: uppercase;
 }
 
 .clearfix:after {
@@ -36,18 +41,21 @@ p {
   width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color: #dceaf3; /*для наглядности сетки*/
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .main-header {
   min-height: 56px;
   position: relative;
-  background-color: #81b3d2; /*для наглядности сетки*/
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .main-navigation ul{
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .main-navigation li {
@@ -55,7 +63,6 @@ p {
   width: 20%;
   padding-top: 15px;
   text-align: center;
-  background-color: #dceaf3 /*для наглядности сетки*/
 }
 
 .main-navigation li:nth-last-child(2) {
@@ -71,101 +78,223 @@ p {
   text-transform: uppercase;
 }
 
+.main-navigation a:hover {
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  color: #cecece;
+}
+
+.main-navigation .active {
+  color: #766357;
+  cursor: pointer;
+}
+
+.main-navigation .active:hover {
+  color: #604e43;
+}
+
+.main-navigation .active:active {
+  color: #dedad8;
+}
+
+.sprite {
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+
 .menu-logo {
   position: absolute;
   left: 50%;
   margin: 0 0 0 -70px;
+  width: 138px;
+  height: 70px;
+  background-position: -10px -1068px;
 }
 
 .intro {
   width: 1200px;
   height: 510px;
   text-align: center;
-  background: url("../img/index-bg.jpg") no-repeat;
+  background:
+    url("../img/index-bg-mask.png") no-repeat center bottom,
+    #e3f0f8 url("../img/index-bg.jpg") no-repeat center;
 }
 
 .intro img {
   padding-top: 76px;
-  background-color: blue /*для наглядности сетки*/
 }
 
 .greeting-text {
   text-align: center;
-  text-transform: uppercase;
   width: 600px;
   margin: 0 auto;
-  min-height: 215px;
+  min-height: 155px;
+  line-height: 26px;
+}
+
+.greeting-text h1 {
+  font-size: 21px;
+  margin-top: 60px;
 }
 
 .greeting-text p {
-  background-color: #81b3d2; /*для наглядности сетки*/
+  font-size: 14px;
 }
 
 .reason {
-  background-color: green; /*для наглядности сетки*/
+  background-color: #81b3d2;
   width: 1200px;
-  min-height: 256px;
+  height: 256px;
 }
 
 .reason-card {
   float: left;
   width: 400px;
-  min-height: 256px;
+  height: 202px;
   text-align: center;
-  vertical-align: middle;
   background-color: #81b3d2;
+  color: #ffffff;
+  padding-top: 54px;
+  line-height: 21px;
+}
+
+.reason-card h2 {
+  color: #ffffff;
+}
+
+.reason-card p {
+  width: 310px;
+  margin: 0 auto;
 }
 
 .text-left {
   float:left;
+  width: 400px;
 }
 
 .text-right {
   float:right;
+  width: 400px;
 }
 
 .img-right {
   float: right;
+  width: 800px;
 }
 
 .img-left {
   float: left;
+  width: 800px;
+  height: 256px;
 }
 
 .advice {
  min-height: 330px;
  text-align: center;
- background-color: red; /*для наглядности сетки*/
+
 }
 
 .advice-item {
   float: left;
   min-height: 330px;
   width: 33%;
+  position: relative;
+}
+
+.advice-item h2 {
+  padding-top: 158px;
+}
+
+.advice-item p {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.advice-item::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: 162px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advice-item.icon-home::before {
+  width: 75px;
+  height: 72px;
+  background-position: -10px -433px;
+}
+
+.advice-item.icon-food::before {
+  width: 74px;
+  height: 70px;
+  background-position: -10px -343px;
+}
+
+.advice-item.icon-souvenirs::before {
+  width: 64px;
+  height: 76px;
+  background-position: -10px -864px;
 }
 
 .reason-block-row {
-  min-height: 256px;
+  height: 256px;
   text-align: center;
   background-color: #eeeeee;
+  width: 1200px;
 }
 
 .reason-block {
   float: left;
-  min-height: 256px;
+  height: 256px;
   width: 33%;
 }
 
+.reason-block p {
+  width: 300px;
+  margin: 0 auto;
+}
+
 .search-hotel {
-  min-height: 291px;
+  height: 291px;
   text-align: center;
-  background-color: #cbdda9; /*для наглядности сетки*/
+}
+
+.search-hotel h2 {
+  font-size: 30px;
+}
+
+.search-hotel p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 52px;
+}
+
+.btn {
+  display: block;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
 }
 
 .btn-search-popup {
   height: 86px;
   width: 568px;
   background-color: #766357;
+  margin: 0 auto;
+  line-height: 86px;
 }
 
 .search-form {
@@ -185,7 +314,8 @@ p {
 .main-footer {
   min-height: 120px;
   text-align: center;
-  background-color: #eed796; /*для наглядности сетки*/
+  background-color: #ffffff;
+  width: 1200px;
 }
 
 .footer-hashtag,
