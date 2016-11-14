@@ -260,18 +260,24 @@ p {
 }
 
 .search-hotel {
-  height: 291px;
+  /*height: 291px;*/
   text-align: center;
+  margin: 0 auto;
+  margin-top: 56px;
+  line-height: 24px;
 }
 
 .search-hotel h2 {
   font-size: 30px;
+  margin: 0;
+  line-height: 24px;
 }
 
 .search-hotel p {
   font-size: 14px;
   font-weight: normal;
-  margin-bottom: 52px;
+  margin-top: 29px;
+  margin-bottom: 45px;
 }
 
 .btn {
@@ -297,17 +303,26 @@ p {
   line-height: 86px;
 }
 
+.btn-search-popup:hover {
+  background-color: #604e43;
+}
+
+.btn-search-popup:active {
+  background-color: #503e33;
+  color: #928a85;
+}
+
 .search-form {
   display: none;
   margin: 0 auto;
   height: 395px;
   width: 568px;
   text-align: center;
-  background-color: #f9f359; /*для наглядности сетки*/
+  background-color: #ffffff; /*для наглядности сетки*/
 }
 
 .map {
-  height: 593px;
+  height: 473px;
   width: 1200px;
 }
 
@@ -316,14 +331,105 @@ p {
   text-align: center;
   background-color: #ffffff;
   width: 1200px;
+  opacity: 0.9;
+  color: #000000;
 }
 
-.footer-hashtag,
-.footer-social,
+.footer-hashtag {
+  width: 33%;
+  float:left;
+  padding-top: 47px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.footer-social {
+  width: 33%;
+  float:left;
+  padding-top: 36px;
+}
+
+.social-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 46px;
+  height: 48px;
+  font-size: 0px;
+  background: #81b3d2 url(../img/sprite.png) no-repeat center;
+  margin: 0 2px;
+}
+
+.icon-twitter {
+  /*width: 17px;
+  height: 15px;*/
+  background-position: -10px -997px;
+}
+
+.icon-facebook {
+  /*width: 10px;
+  height: 19px;*/
+  background-position: -10px -304px;
+}
+
+.icon-youtube {
+  /*width: 20px;
+  height: 16px;*/
+  background-position: -10px -1032px;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-btn a:active {
+  background-color: #94b9d2;
+}
+
 .footer-copyright {
   width: 33%;
   float:left;
+  padding-top: 41px;
 }
+
+.footer-copyright span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000000;
+  line-height: 38px;
+  margin-right: 8px;
+}
+
+.footer-copyright a {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0px;
+  margin: 0;
+  background: url(../img/sprite.png) no-repeat center;
+  width: 113px;
+  height: 39px;
+  background-position: -10px -525px;
+  cursor: pointer;
+}
+
+.footer-copyright a:hover {
+  width: 113px;
+  height: 39px;
+  background-position: -10px -643px;
+}
+
+.footer-copyright a:active {
+  width: 113px;
+  height: 39px;
+  background-position: -10px -584px;
+}
+
 
 /*Отели*/
 
@@ -334,13 +440,32 @@ p {
 .filter-hotel {
   padding-left: 72px;
   padding-right: 72px;
-  min-height: 217px;
-  background: url("../img/hotels-bg.jpg") no-repeat;
+  padding-top: 27px;
+  height: 217px;
+  background: #386181 url("../img/hotels-bg.jpg") no-repeat center;
 }
 
-.filter-hotel-feature,
+.filter-hotel-feature {
+  float: left;
+  width: 140px;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-right: 114px;
+}
+
 .filter-hotel-option {
   float: left;
+  width: 140px;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
 }
 
 .filter-hotel-price {
@@ -353,43 +478,61 @@ p {
   padding-top: 35px;
   width: 1056px;
   min-height: 51px;
-  background-color: green; /*для наглядности сетки*/
+  background-color: #fefefe;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .resalt-search {
   float: left;
   width: 154px;
   margin-right: 10;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 
 .resalt-sort {
   float: left;
   width: 400px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.resalt-sort a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #cacaca;
+  text-decoration: none;
+  border-bottom: 1px dotted #81b3d2;
+  margin-right: 30px;
 }
 
 .result-arrows {
   float: right;
   width: 35px;
-  background-color: white; /*для наглядности сетки*/
+  font-size: 0px;
 }
 
 .resalt-hotel-content {
   padding: 30px 72px;
   width: 1052px;
   min-height: 150px;
+  background-color: #fefefe;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel-photo {
   float:left;
+  width: 135px;
   margin-right: 30px;
 }
 
 .hotel-info {
   float: left;
-  background-color: green; /*для наглядности сетки*/
 }
 
 .hotel-rating {
   float: right;
-  background-color: blue; /*для наглядности сетки*/
 }
