@@ -38,44 +38,42 @@
             <div class="filter-hotel clearfix">
               <fieldset class="filter-hotel-feature">
                 <legend class="filter-title">Инфраструктура:</legend>
-                <input class="checkbox" type="checkbox" name="hotel-feature" id="pool" checked>
+                <input type="checkbox" name="hotel-feature" id="pool" checked>
                 <label for="pool">Бассейн</label>
-                <input type="checkbox" type="checkbox" name="hotel-feature" id="parking">
+                <input type="checkbox" name="hotel-feature" id="parking">
                 <label for="parking">Парковка</label>
-                <input type="checkbox" type="checkbox" name="hotel-feature" id="wi-fi">
+                <input type="checkbox" name="hotel-feature" id="wi-fi">
                 <label for="wi-fi">Wi-Fi</label>
               </fieldset>
               <fieldset class="filter-hotel-option">
                 <legend class="filter-title">Тип жилья:</legend>
-                <input type="checkbox" type="checkbox" name="hotel-option" id="hotel" checked>
+                <input type="checkbox" name="hotel-option" id="hotel" checked>
                 <label for="hotel">Гостиница</label>
-                <input type="checkbox" type="checkbox" name="hotel-option" id="motel" checked>
+                <input type="checkbox" name="hotel-option" id="motel" checked>
                 <label for="motel">Мотель</label>
-                <input type="checkbox" type="checkbox" name="hotel-option" id="apartments" checked>
+                <input type="checkbox" name="hotel-option" id="apartments" checked>
                 <label for="apartments">Апартаменты</label>
               </fieldset>
 
-              <fieldset class="filter-hotel-price">
-                <legend class="filter-title">Стоимость в сутки (р):</legend>
-                <div class="price-range">
-                  <div class="price-controls">
-                    <label class="min-price">от
-                      <input type="text" name="min-price" value="0">
-                    </label>
-                    <label class="max-price">до
-                      <input type="text" name="max-price" value="3000">
-                    </label>
-                  </div>
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar"></div>
-                    </div>
-                    <div class="range-toggle range-toggle-min"></div>
-                    <div class="range-toggle range-toggle-max"></div>
-                  </div>
-                  <button class="btn btn-transparent" type="submit">Показать</button>
+              <div class="filter-range">
+                <div class="filter-range-title">Стоимость в сутки (р):</div>
+                <div class="price-controls">
+                  <label class="min-price">от
+                    <input type="text" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">до
+                    <input type="text" name="max-price" value="3000">
+                  </label>
                 </div>
-              </fieldset>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
+                <button class="btn btn-transparent" type="submit">Показать</button>
+              </div>
             </div>
           </form>
 
@@ -112,7 +110,7 @@
                   <span class="hotel-type">Гостиница</span>
                   <span class="hotel-price">от 3500 р.</span>
                 </div>
-                <div class="hotel-btn">
+                <div class="hotel-btn clearfix">
                   <a class="btn btn-more" href="#">Подробнее</a>
                   <a class="btn btn-book" href="#">Забронировать</a>
                 </div>
