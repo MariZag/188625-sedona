@@ -105,33 +105,36 @@
         <div class="search-popup">
           <form class="search-form" action="#" method="get">
             <div class="search-setting">
-              <label class="search-date" for="checkin_date">Дата заезда:</label>
-              <input type="date" name="checkin_date" id="checkin_date" value="24 апреля 2016">
+              <label for="checkin_date">Дата заезда:</label>
+              <input class="input-date" type="text" name="checkin_date" id="checkin_date" value="24 апреля 2016">
+              <button type="button" class="btn-icon-calendar"></button>
             </div>
             <div class="search-setting">
-              <label class="search-date" for="checkout_date">Дата выезда:</label>
-              <input type="date" name="checkout_date" id="checkout_date" value="4 июля 2016">
+              <label for="checkout_date">Дата выезда:</label>
+              <input class="input-date" type="text" name="checkout_date" id="checkout_date" value="4 июля 2016">
+              <button type="button" class="btn-icon-calendar"></button>
             </div>
-            <div class="search-setting">
-              <label class="search-date" for="adults">Взрослые:</label>
-              <div class="search-setting-step-value">
+            <div class="search-setting-block clearfix">
+              <div class="search-setting-adults">
+                <label for="adults">Взрослые:</label>
                 <button type="button" class="btn-icon-minus"></button>
-                <input class="search-input-number" type="number" name="adults" value="2">
+                <input class="input-adults" type="text" name="adults" id="adults" value="2">
                 <button type="button" class="btn-icon-plus"></button>
               </div>
-              <div class="search-setting-step-value">
-                <label class="search-date" for="children">Дети:</label>
+              <div class="search-setting-children">
+                <label for="children">Дети:</label>
                 <button type="button" class="btn-icon-minus"></button>
-                <input class="search-input-number" type="number" name="children" value="0">
+                <input class="input-children" type="text" name="children" id="children" value="0">
                 <button type="button" class="btn-icon-plus"></button>
               </div>
-              <input class="btn btn-search" type="submit" value="Найти">
             </div>
+            <input class="btn btn-search" type="submit" value="Найти">
           </form>
-          <div class="map">
-            <img src="img/map.jpg">
-    		  </div>
         </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31147.076886064864!2d-111.78324534029517!3d34.85790671278308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1479589174882" width="1200" height="593"></iframe>
+            <!-- <img src="img/map.jpg"> -->
+    		  </div>
 
       </main>
 
