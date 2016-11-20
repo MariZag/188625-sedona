@@ -43,6 +43,7 @@ p {
   padding: 0;
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+  position: relative;
 }
 
 /* ---Header--- */
@@ -344,7 +345,7 @@ p {
 /* ---Search form--- */
 
 .search-form {
-  /*display: none;*/
+  display: none;
   position: absolute;
   z-index: 5;
   left: 50%;
@@ -358,11 +359,48 @@ p {
   text-transform: uppercase;
 }
 
+.search-form-show {
+  display: block;
+
+  -webkit-animation: drive 0.5s;
+          animation: drive 0.5s;
+}
+
+@-webkit-keyframes drive {
+  0% {
+    transform: translateY(-50px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes drive {
+  0% {
+    transform: translateY(-50px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .search-setting,
 .search-setting-adults,
 .search-setting-children {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   font-size: 0;
 }
 
@@ -434,7 +472,7 @@ p {
 }
 
 .search-setting-block {
-  margin-bottom: 50px;
+  margin-bottom: 54px;
   font-size: 0;
 }
 
@@ -457,7 +495,7 @@ p {
 }
 
 .search-form .input-adults {
-  height: 38px;
+  height: 32px;
   width: 60px;
   padding-left: 25px;
   padding-right: 25px;
@@ -471,7 +509,7 @@ p {
 }
 
 .search-form .input-children {
-  height: 38px;
+  height: 32px;
   width: 60px;
   padding-left: 25px;
   padding-right: 25px;
@@ -480,38 +518,37 @@ p {
 
 .btn-icon-minus {
   position: absolute;
-  top: 19px;
-  right: 89px;
-  height: 3px;
-  width: 12px;
+  top: 0px;
+  right: 77px;
+  height: 38px;
+  width: 38px;
   background: url("../img/sprite.png") no-repeat;
-  background-position: -259px -52px;
+  background-position: -246px -33px;
 }
 
 .btn-icon-minus:hover {
-  background-position: -10px -98px;
+  background-position: 3px -79px;
 }
-
 .btn-icon-minus:active {
-  background-position: -259px -75px;
+  background-position: -246px -56px;
 }
 
 .btn-icon-plus {
   position: absolute;
-  top: 16px;
-  right: 14px;
-  height: 11px;
-  width: 11px;
+  top: 0px;
+  right: 3px;
+  height: 38px;
+  width: 38px;
   background: url("../img/sprite.png") no-repeat;
-  background-position: -259px -98px;
+  background-position: -242px -84px;
 }
 
 .btn-icon-plus:hover {
-  background-position: -276px -160px;
+  background-position: -259px -146px;
 }
 
 .btn-icon-plus:active {
-  background-position: -276px -129px;
+  background-position: -259px -115px;
 }
 
 .search-form input[type="submit"] {
@@ -559,10 +596,10 @@ p {
 .main-footer {
   min-height: 120px;
   text-align: center;
-  background-color: #fefefe;
-  width: 1200px;
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.8);
   color: #000000;
+  position: absolute;
+  z-index: 10;
 }
 
 .footer-hashtag {
@@ -927,7 +964,7 @@ p {
 
 .result-arrows {
   float: right;
-  width: 35px;
+  width: 40px;
   font-size: 0px;
   text-align: right;
   margin-top: 35px;
@@ -977,8 +1014,8 @@ a.arrows-up:active::before {
   /*padding: 30px 72px;*/
   padding-left: 72px;
   padding-right: 72px;
-  padding-top: 29px;
-  padding-bottom: 31px;
+  padding-top: 28px;
+  padding-bottom: 29px;
   width: 1056px;
   min-height: 90px;
   background-color: #fefefe;
