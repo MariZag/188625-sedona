@@ -103,7 +103,7 @@ p {
 }
 
 .sprite {
-  background: url(../img/sprite.png) no-repeat;
+  background: transparent url("../img/sprite.png") no-repeat;
   display: block;
 }
 
@@ -124,7 +124,8 @@ p {
   text-align: center;
   background:
     url("../img/index-bg-mask.png") no-repeat,
-    #ddebf4 url("../img/index-bg.jpg") no-repeat;
+    url("../img/index-bg.jpg") no-repeat;
+  background-color: #ddebf4;
   background-position:
     center bottom,
     0 -57px;
@@ -239,7 +240,7 @@ p {
   left: 162px;
   width: 76px;
   height: 76px;
-  background: url(../img/sprite.png) no-repeat center;
+  background: transparent url("../img/sprite.png") no-repeat center;
 }
 
 .advice-item.icon-home::before {
@@ -458,7 +459,7 @@ p {
   right: 9px;
   height: 22px;
   width: 21px;
-  background: url("../img/sprite.png") no-repeat;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat;
   background-position: -10px -10px;
 }
 
@@ -521,7 +522,7 @@ p {
   right: 77px;
   height: 38px;
   width: 38px;
-  background: url("../img/sprite.png") no-repeat;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat;
   background-position: -246px -33px;
 }
 
@@ -538,7 +539,7 @@ p {
   right: 3px;
   height: 38px;
   width: 38px;
-  background: url("../img/sprite.png") no-repeat;
+  background: #f2f2f2 url("../img/sprite.png") no-repeat;
   background-position: -242px -84px;
 }
 
@@ -626,7 +627,7 @@ p {
   width: 46px;
   height: 48px;
   font-size: 0px;
-  background: #81b3d2 url(../img/sprite.png) no-repeat center;
+  background: #81b3d2 url("../img/sprite.png") no-repeat center;
   margin: 1px 1px;
     /*margin: 0px 2px;*/
 }
@@ -684,7 +685,7 @@ p {
   vertical-align: middle;
   font-size: 0px;
   margin: 0;
-  background: url(../img/sprite.png) no-repeat center;
+  background: transparent url("../img/sprite.png") no-repeat center;
   width: 113px;
   height: 39px;
   background-position: -10px -144px;
@@ -774,13 +775,23 @@ p {
   left: 0;
   width: 26px;
   height: 22px;
-  background: url(../img/sprite.png) no-repeat;
+  background: transparent url("../img/sprite.png") no-repeat;
   background-position: -267px -10px;
+}
+
+.filter-hotel-feature input[type="checkbox"]:disabled + label::before,
+.filter-hotel-option input[type="checkbox"]:disabled + label::before {
+  background-position: -225px -10px;
 }
 
 .filter-hotel-feature input[type="checkbox"]:checked + label::before,
 .filter-hotel-option input[type="checkbox"]:checked + label::before {
   background-position: -133px -10px;
+}
+
+.filter-hotel-feature input[type="checkbox"]:checked:disabled + label::before,
+.filter-hotel-option input[type="checkbox"]:checked:disabled + label::before {
+  background-position: -179px -10px;
 }
 
 
@@ -839,8 +850,12 @@ p {
 .price-controls input {
   width: 50px;
   margin: 0;
-  color: inherit;
-  font: inherit;
+  color: #ffffff;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  text-align: left;
   background: none;
   border: none;
 }
@@ -1134,7 +1149,7 @@ a.arrows-up:active::before {
 .icon-star {
   display: inline-block;
   vertical-align: top;
-  background: url(../img/sprite.png) no-repeat;
+  background: transparent url("../img/sprite.png") no-repeat;
   background-position: -227px -203px;;
   width: 19px;
   height: 17px;
